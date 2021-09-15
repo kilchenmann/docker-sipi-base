@@ -84,6 +84,10 @@ RUN apt-get clean && apt-get -y install \
     iiif_validator && \
     rm -rf /var/lib/apt/lists/*
 
+# Install packages for audio and video conversion
+RUN apt-get clean && apt-get -y install \
+    ffmpeg \
+    at
 
 #
 # The linux/amd64 variant (e.g., Intel CPUs, etc.)

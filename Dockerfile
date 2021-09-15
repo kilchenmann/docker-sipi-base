@@ -3,7 +3,7 @@
 #
 FROM ubuntu:20.04 as base
 
-LABEL maintainer="400790+subotic@users.noreply.github.com"
+LABEL maintainer="400790+kilchenmann@users.noreply.github.com"
 
 # Silence debconf messages
 ARG DEBIAN_FRONTEND=noninteractive
@@ -45,7 +45,9 @@ RUN sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
     libidn11-dev \
     locales \
     uuid \
-    uuid-dev
+    uuid-dev \
+    ffmpeg \
+    at
 
 # add locales
 RUN locale-gen en_US.UTF-8 && \
@@ -85,9 +87,9 @@ RUN apt-get clean && apt-get -y install \
     rm -rf /var/lib/apt/lists/*
 
 # Install packages for audio and video conversion
-RUN apt-get clean && apt-get -y install \
-    ffmpeg \
-    at
+# RUN apt-get clean && apt-get -y install \
+#     ffmpeg \
+#     at
 
 #
 # The linux/amd64 variant (e.g., Intel CPUs, etc.)

@@ -3,7 +3,7 @@
 #
 FROM ubuntu:20.04 as base
 
-LABEL maintainer="400790+kilchenmann@users.noreply.github.com"
+LABEL maintainer="4253580+kilchenmann@users.noreply.github.com"
 
 # Silence debconf messages
 ARG DEBIAN_FRONTEND=noninteractive

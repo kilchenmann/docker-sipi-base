@@ -4,11 +4,11 @@ Docker image containing the base environment necessary to build and run the SIPI
 
 ## Usage
 
-In your dockerfile add:
+In your dockerfile add, if you use the forked version from @kilchenmann:
 
-````
-FROM daschswiss/sipi-base:latest
-````
+```Dockerfile
+FROM kilchenmann/sipi-base:latest
+```
 
 ## Multiplatform Build Resources
 

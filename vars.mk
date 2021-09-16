@@ -1,4 +1,4 @@
-DOCKER_REPO := daschswiss/sipi-base
+DOCKER_REPO := kilchenmann/sipi-base
 
 ifeq ($(BUILD_TAG),)
 	BUILD_TAG := $(shell git describe --tag --dirty --abbrev=7)
